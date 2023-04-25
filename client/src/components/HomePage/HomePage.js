@@ -62,9 +62,13 @@ export default function HomePage () {
                 </div>
                 <div>                    
                   <select className={stl.hpfilter} onChange={e => handleGenreFilter(e)}>
-                    {allgenres.sort().map(e => {
-                         return <option value={e}>{e}</option>
-                    })}      
+                  {allgenres.sort().map((e, index) => {
+                return (
+                  <option key={index} value={e}>
+                    {e}
+                  </option>
+                );
+              })}    
                   </select>
                 </div>
                 <div>  
